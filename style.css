@@ -166,6 +166,12 @@ body {
     line-height: 1.8;
 }
 
+.about .row img{
+    max-width: 500px;
+    border-radius: 8px;
+
+}
+
 .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
