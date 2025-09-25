@@ -33,6 +33,7 @@ section {
     text-decoration: none;
     text-transform: capitalize;
     transition: 0.2s linear;
+    scroll-behavior: smooth;
 }
 
 body {
