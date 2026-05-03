@@ -450,3 +450,58 @@ body {
         height: 250px;
     }
 }
+
+/* Container da seção de horários */
+.schedule-container {
+    padding: 10rem 7%; /* Espaçamento para não ficar sob o header fixo */
+    min-height: 80vh;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000; /* Mantém o fundo preto do site */
+}
+
+/* Deixa a tabela responsiva em celulares */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.tabela-tabela {
+    background-color: #D8C7A7;
+    border-collapse: collapse;
+    border: 5px solid #1D2B38;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 2rem;
+}
+
+.tabela-cabecalho-linha, 
+.tabela-celula {
+    border: 2px solid #1D2B38; /* Diminuí um pouco a borda interna para elegância */
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem; /* Ajustado para o padrão do seu site */
+    color: #1D2B38;
+}
+
+.tabela-cabecalho-linha {
+    background-color: #1D2B38;
+    color: #D8C7A7;
+    text-transform: uppercase;
+}
+
+.tabela-linha:nth-child(even) {
+    background-color: rgba(29, 43, 56, 0.1); /* Efeito zebra suave */
+}
+
+/* Ajuste mobile */
+@media (max-width: 768px) {
+    .tabela-cabecalho-linha, .tabela-celula {
+        font-size: 1.4rem;
+        padding: 1rem 0.5rem;
+    }
+}

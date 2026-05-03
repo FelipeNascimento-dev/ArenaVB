@@ -1,0 +1,130 @@
+/* --- PAGINA DE RESERVA --- */
+:root {
+    --sand: #c9a87c;
+    --navy: #1b2e45;
+    --border-reserva: rgba(201,168,124,0.25);
+}
+
+.hero-strip {
+    background: #111;
+    text-align: center;
+    padding: 12rem 2.4rem 5rem; /* Padding maior no topo por causa do header fixo */
+    border-bottom: 1px solid var(--border-reserva);
+}
+
+.hero-strip h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.hero-strip h1 span { color: var(--sand); }
+
+.hero-strip p {
+    color: #aaa;
+    font-size: 1.6rem;
+    max-width: 50rem;
+    margin: 1.5rem auto 0;
+}
+
+.form-section {
+    padding: 5rem 2rem 8rem;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.form-card {
+    background: #111;
+    border: 1px solid var(--border-reserva);
+    border-radius: 4px;
+    padding: 3.5rem;
+    border-top: 4px solid var(--sand);
+}
+
+.section-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: var(--sand);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-reserva);
+}
+
+.field-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.field label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.field input, .field select, .field textarea {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border-reserva);
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.field textarea { height: 12rem; resize: none; }
+
+.btn-submit {
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--sand);
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-submit:hover { background: #dfc4a0; }
+
+/* TOAST NOTIFICATION */
+.toast {
+    position: fixed;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5rem 3rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #fff;
+    z-index: 1000;
+    display: none;
+}
+
+.toast.show { display: block; animation: fadeUp 0.5s ease; }
+.toast.success { background: var(--navy); border: 1px solid var(--sand); }
+.toast.error { background: #c0392b; }
+
+@media (max-width: 480px) {
+    .field-group { grid-template-columns: 1fr; }
+    .hero-strip h1 { font-size: 4rem; }
+}
