@@ -118,7 +118,7 @@ body {
 }
 
 .home-container {
-    background: url("./img/home-img.jpg");
+    background: url("./img/principal.jpg");
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -340,7 +340,10 @@ body {
     }
 
     .navbar {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
     }
 
     .home-container section {
